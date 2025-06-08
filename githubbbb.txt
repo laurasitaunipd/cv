@@ -1,0 +1,70 @@
+#################################################################### NEW REPO
+SE VOGLIO RENDERE UNA CARTELLA ESISTENTE (con del materiale dentro!) SUL LOCALE COME NUOVA REPO
+
+(PROFILO GITHUB > CREA UNA NUOVA REPO "new" > NOME + PUBBLIC)
+DA TERMINALE:
+[...VERIFICA CHE SIA IL PERCORSO CORRETTO...] git init
+[...] git add .
+[...] git commit -m "init"
+[...] git branch -M main
+[...] git remote add origin https://github.com/laurasitaunipd/nome-repo.git
+[...] git push -u origin main
+
+DA GUTHUB DESKTOP:
+FILE > NEW REPOSITORY
+METTI IL NOME + SCEGLI IL PERCORSO CORRETTO (es. C:\Users\Laura\Desktop\GITHUB) > PUBBLISH
+INSERISCI IL MATERIALE NELLA CARTELLA-REPO SUL LOCALE
+PREMI COMMIT > PREMI PUSH
+
+#################################################################### CLONE
+SE VOGLIO SCARICARE UNA REPO DAL MIO PROFILO SUL LOCALE
+
+VAI NELLA CARTELLA GIT (es. "GITHUB/cv") SUL LOCALE DOVE VOGLIO LA REPO > TASTO DESTRO > APRI NEL TERMINALE
+[...VERIFICA CHE SIA IL PERCORSO CORRETTO...] git clone https://github.com/laurasitaunipd/nome-repo.git
+
+#################################################################### PULL
+SE VOGLIO TIRARE GIU' SUL LOCALE LE MODIFICHE DA GITHUB
+VAI NELLA CARTELLA GIT SUL LOCALE > TASTO DESTRO > APRI NEL TERMINALE
+
+[...VERIFICA CHE SIA IL PERCORSO CORRETTO...] git pull 
+
+#################################################################### PUSH
+SE VOGLIO MANDARE SU GITHUB LE MODIFICHE 
+(LA PRIMA RIGA PER CARICARE TUTTO)
+(NELLA SECONDA RIGA VA BENE QUALSIASI PAROLA DENTRO LE VIRGOLETTE)
+VAI NELLA CARTELLA GIT SUL LOCALE > TASTO DESTRO > APRI NEL TERMINALE
+
+[...VERIFICA CHE SIA IL PERCORSO CORRETTO...] git add . 
+[...] git commit -m "update"
+[...] git push
+
+#################################################################### PER IL SITO 
+se ho un home page (file index)
+laurasitaunipd.github.io/nomedellarepository/
+
+altrimenti
+laurasitaunipd.github.io/nomedellarepository/nomefile.html
+
+#################################################################### NOTA BENE
+nelle cartelle non toccare mai il file nascosto .git
+
+
+##################################################################### INSTALLARE GITHUB
+winget install --id Git.Git -e --source winget
+
+git --version
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+git config --list
+
+ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+
+eval $(ssh-agent -s)
+
+ssh-add ~/.ssh/id_rsa
+
+cat ~/.ssh/id_rsa.pub | clip
+
+ssh -T git@github.com
